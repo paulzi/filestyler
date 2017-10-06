@@ -1,0 +1,37 @@
+.filestyler__file {
+  display: block; }
+
+.filestyler_empty .filestyler__clear {
+  display: none; }
+
+.filestyler_uninitialized .filestyler__remove, .filestyler_uninitialized .filestyler__clear, .filestyler_uninitialized .filestyler__visible {
+  display: none; }
+
+.filestyler_mode_default .filestyler__remove, .filestyler_mode_add .filestyler__remove {
+  display: none; }
+
+.filestyler_initialized .filestyler__file {
+  position: relative;
+  overflow: hidden; }
+
+.filestyler_initialized .filestyler__input {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 1000px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit; }
+
+.filestyler_initialized .filestyler__drop {
+  position: relative;
+  overflow: hidden; }
+
+.filestyler_initialized .filestyler__hidden {
+  display: none; }
