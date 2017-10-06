@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/filestyler.svg?style=flat)](https://www.npmjs.org/package/filestyler)
 ![Bower version](http://img.shields.io/bower/v/filestyler.svg?style=flat)
 
-Компонент для стилизации `input(type=file)` с поддержкой ajax-отправки.
+Компонент для стилизации файловых полей с поддержкой ajax-отправки.
 
 ## Установка
 

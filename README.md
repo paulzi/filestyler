@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/filestyler.svg?style=flat)](https://www.npmjs.org/package/filestyler)
 ![Bower version](http://img.shields.io/bower/v/filestyler.svg?style=flat)
 
-`<input type="file">` styling plugin with ajax upload support.
+File input styling plugin with ajax upload support.
 
 ## Install
 
