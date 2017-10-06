@@ -5,6 +5,8 @@
 
 File input styling plugin with ajax upload support.
 
+[Russian readme](https://github.com/paulzi/filestyler/blob/master/README.ru.md)
+
 ## Install
 
 Install via NPM:
@@ -48,7 +50,7 @@ Include the component styles to the tag `head`:
 
 ## Usage
 
-This is an example of component markup (you can [change it at your discretion](#templating)):
+This is an example of component markup (you can [change it at your discretion](#templates)):
 
 ```html
 <div class="filestyler filestyler_uninitialized filestyler_image">
@@ -77,11 +79,11 @@ FileStyler supports several modes - from simple styling, to ajax file uploads:
 
 The mode at which the standard browser behavior of the `<input type="file">` element is completely preserved, namely, when you repeat select files - previous selection will be canceled.
 
-Drag'n'drop will work only in browsers that support this natively on the `<input type="file">`. To extend the drop zone, use the [moveInputOnDrag](#move-input-on-drag) option.
+Drag'n'drop will work only in browsers that support this natively on the `<input type="file">`. To extend the drop zone, use the [moveInputOnDrag](#moveinputondrag) option.
 
 Selective deletion of the files is not supported in this mode.
 
-The sorting of files is possible only using [sortHelper plugin](#sort-helper).
+The sorting of files is possible only using [sortHelper plugin](#built-in-plugins).
 
 The only difference from standard behavior is that if the browser does not support the `multiple` attribute, FileStyler will act as a polyfill by switching mode to `add`.
 
@@ -121,7 +123,7 @@ If you want to send the entire form via AJAX, you can use [paulzi-form](https://
 | Drag'n'drop          |    *2   |  *2 |   *2  |   +    |  +   |
 | Standard submission  |    +    |  +  |   +   |   -    |  -   |
 
-- *1 - sorting is possible by [sortHelper plugin](#sort-helper)
+- *1 - sorting is possible by [sortHelper plugin](#built-in-plugins)
 - *2 - only in browsers with native drag'n'drop support on `<input type="file">`
 
 *Note: under sorting support, we mean the very possibility to change the order of the `.filestyler__item` elements with the corresponding change in order in the data sent to the server. The functionality of changing the order of elements in the user interface is not implemented by this library. Use for this purpose third-party libraries, for example, [RubaXa/Sortable](https://github.com/RubaXa/Sortable).*
@@ -154,7 +156,7 @@ filestyler.clear();
 
 *(String) default: 'add'*
 
-[Mode](#mode)
+[Mode](#modes)
 
 ##### `mimeMap`
 
@@ -187,7 +189,7 @@ If in component are no files yet, this option define the place in the list `.fil
 Function of formatting the file size. The following parameters are passed to the function:
 
 - `size` *(int)* - file size in bytes
-- `list` *(Array)* - array of labels defined in the option [fileSizeLabels](#file-size-labels)
+- `list` *(Array)* - array of labels defined in the option [fileSizeLabels](#filesizelabels)
 
 ##### `fileSizeLabels`
 
@@ -201,7 +203,7 @@ A set of labels for formatting the file size.
 
 Template function for creating an element. This function will be called to get the HTML of element `.filestyler__item`.
 
-Read more in [templates](#templating).
+Read more in [templates](#templates).
 
 #### `image` plugin options
 
@@ -503,7 +505,7 @@ The following data will be transferred to the template function as data:
 
 - `filestyler` *(FileStyler)* - FileStyler instance
 - `file` *(File)* - file
-- `fileSizeFormatted` *(string)* - formatted file size (see [fileSizeFormatter](#file-size-formatter))
+- `fileSizeFormatted` *(string)* - formatted file size (see [fileSizeFormatter](#filesizeformatter))
 - `plugins` *(object)* - plugin templates
 
 Plugins can add additional data:
@@ -556,7 +558,7 @@ All functionality of component is linked to the CSS classes `filestyler_ *`, you
 Basic:
 
 - `.filestyler` - root of component
-- `.filestyler_uninitialized` - uninitialized state of the component. Can be used to stylize a component with [disabled javascript](#no-js-support)
+- `.filestyler_uninitialized` - uninitialized state of the component. Can be used to stylize a component with [disabled javascript](#functionality-when-javascript-is-disabled)
 - `.filestyler_initialized` - initialized state of the component
 - `.filestyler_empty` - empty component state (no files)
 - `.filestyler_mode_{{mode}}` - class with current mode
@@ -583,7 +585,7 @@ Basic:
 `drop` plugin classes:
 
 - `.filestyler__drop` - drag'n'drop container
-- `.filestyler__drop-input` - class will be add to input-element when start drag'n'drop, with enabled option [moveInputOnDrag](#moveInputOnDrag)
+- `.filestyler__drop-input` - class will be add to input-element when start drag'n'drop, with enabled option [moveInputOnDrag](#moveinputondrag)
 - `.filestyler__drop_hint` - class will be add to `.filestyler__drop` when user start drag'n'drop on the page
 - `.filestyler__drop_in` - class will be add to `.filestyler__drop` when user start drag'n'drop and cursor hover on `.filestyler__drop`
 
@@ -638,11 +640,11 @@ Also you can modify the ready styles using SASS. To do this, import the styles y
 
 ```scss
 @import "~filestyler/src/sass/_image";
-@import "~filestyler/src/sass/_дшые";
+@import "~filestyler/src/sass/_list";
 
 .filestyler_image {
   $config: (
-    color-success: #0f0  
+    color-success: #0f0
   );
   @include filestyler__image($config);
 }
