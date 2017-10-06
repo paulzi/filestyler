@@ -2,7 +2,7 @@
  * FileStyler Legacy
  * @see https://github.com/paulzi/filestyler
  * @license MIT (https://github.com/paulzi/filestyler/blob/master/LICENSE)
- * @version 1.0.0
+ * @version 0.1.0
  */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {

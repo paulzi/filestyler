@@ -667,7 +667,7 @@ See src files for the available options. The rest of the modifications can be ap
 
 ## Examples
 
-https://paulzi.github.io/filestyler/
+https://paulzi.github.io/filestyler/docs/
 
 ## Browser support
 
