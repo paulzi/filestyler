@@ -1,6 +1,6 @@
 {
   "name": "filestyler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "File input styling plugin with ajax upload support",
   "main": "dist/filestyler.js",
   "keywords": [
@@ -20,7 +20,7 @@
     "url": "https://github.com/paulzi/filestyler.git"
   },
   "dependencies": {
-    "jquery": "^1.12.0"
+    "jquery": ">=1.12.4"
   },
   "optionalDependencies": {
     "jquery-iframe-ajax": "^1.0.2"
