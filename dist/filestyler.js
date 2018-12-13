@@ -2,7 +2,7 @@
  * FileStyler Legacy
  * @see https://github.com/paulzi/filestyler
  * @license MIT (https://github.com/paulzi/filestyler/blob/master/LICENSE)
- * @version 0.1.0
+ * @version 0.1.2
  */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -287,6 +287,7 @@ FileStyler.prototype.clear = function() {
     }
     this.callPlugins('clear', []);
     this.$element.find(itemClass).remove();
+    this.$element.find(baseClass + '__list').children(baseClass + '__input').remove();
     this.$input.val('');
     this.$element.addClass(base + '_empty');
     trigger(this.$element, 'Clear');

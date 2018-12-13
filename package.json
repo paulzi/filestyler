@@ -1,6 +1,6 @@
 {
   "name": "filestyler",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "File input styling plugin with ajax upload support",
   "main": "dist/filestyler.js",
   "keywords": [
