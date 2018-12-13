@@ -287,7 +287,7 @@ FileStyler.prototype.clear = function() {
     }
     this.callPlugins('clear', []);
     this.$element.find(itemClass).remove();
-    this.$element.find(baseClass + '__list').children(baseClass + '__input').remove();
+    this.$element.find(baseClass + '__input').filter(baseClass + '__hidden').remove();
     this.$input.val('');
     this.$element.addClass(base + '_empty');
     trigger(this.$element, 'Clear');
