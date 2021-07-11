@@ -665,7 +665,7 @@ FileStyler поддерживает сохранение функциональ�
 
 ## Примеры
 
-http://paulzi.ru/github/filestyler/docs/
+https://paulzi.ru/misc/github/filestyler/docs/
 
 ## Поддержка браузерами
 
